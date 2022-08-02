@@ -1,0 +1,11 @@
+Need a 'cell' object.
+We will init:
+    Number of nearby mines as 0
+    Bomb cell as false
+We need the following methods:
+    Set as bomb
+    Somehow lock a cell if flagged
+    Reveal. This will then call the nearby reveal function if it is blank
+
+
+Need some kind of recursive function to reveal nearby cells

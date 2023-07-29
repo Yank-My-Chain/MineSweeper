@@ -1,4 +1,5 @@
 import string
+from random import randint
 
 # Symbols for squares
 UNTOUCHED = '-'
@@ -27,6 +28,9 @@ class Cell:
     def flag(self):
         pass
 
+    def set_as_bomb(self):
+        self.contains_bomb = True
+
     def splash(self):
         print(self.front_view, end='')
 
@@ -54,8 +58,11 @@ class MineField:
                 cell.splash()
             print('')
 
+    def set_bombs(self, total_bombs):
+        for x in range(total_bombs):
+            self.cells[randint(0,WIDTH-1)][randint(0,HEIGHT-1)].set_as_bomb
+
 
 if __name__ == '__main__':
     game = MineField()
-
     game.print_field()
